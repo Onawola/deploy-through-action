@@ -40,8 +40,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: |
-              sudo su - cloud-user
+          script: |              
               sudo bash ../home/cloud-user/start-auto-deploy-service.sh stop
               
     - name: Deploy JAR via SCP
@@ -62,6 +61,5 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: |
-              sudo su - cloud-user
+          script: |              
               sudo bash ../home/cloud-user/start-auto-deploy-service.sh start
